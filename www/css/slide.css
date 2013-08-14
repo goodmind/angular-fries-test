@@ -1,0 +1,46 @@
+/* Angular.js animated navigation */
+.push .slide-enter{
+  /*-webkit-animation: push 1s;*/
+  z-index: 0;
+}
+
+.push .slide-leave{
+  z-index: 1;
+  -webkit-animation: pop 0.2s; 
+}
+
+/* Angular.js animated navigation */
+.pop .slide-enter{
+  -webkit-animation: push 0.2s;
+  z-index: 1;
+}
+
+.pop .slide-leave{
+  z-index: 0;
+}
+
+@-webkit-keyframes push {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1); 
+  }
+}
+
+@-webkit-keyframes pop {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1); 
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 1); 
+  } 
+}
+
+    
